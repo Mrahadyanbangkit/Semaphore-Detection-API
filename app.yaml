@@ -1,0 +1,11 @@
+runtime: python39
+service: default
+
+handlers:
+- url: /
+  static_files: Semaphore-Detection-API/main.py
+  upload: Semaphore-Detection-API/main.py
+
+- url: /(.*)
+  static_files: Semaphore-Detection-API/main.py
+  upload: Semaphore-Detection-API/(.*)
