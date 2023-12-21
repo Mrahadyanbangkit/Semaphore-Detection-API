@@ -2,6 +2,7 @@ from flask import Flask, request, jsonify
 import os
 from PIL import Image
 import numpy as np
+import tensorflow
 from keras.models import load_model
 from keras.preprocessing.image import img_to_array
 
@@ -101,3 +102,13 @@ def classify_semaphore():
 
 if __name__ == '__main__':
     app.run(debug=True)
+
+# @app.route('/')
+# def index():
+#     return jsonify({
+#         "status" : {
+#             "code" : 200,
+#             "message" : "Succes fetching the API",
+#         },
+#         "data" : None,
+#     }),200
